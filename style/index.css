@@ -58,6 +58,11 @@
   }
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .quiz {
   background-color: #c2c2c2;
   min-height: 100vh;

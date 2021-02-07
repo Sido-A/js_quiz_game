@@ -46,10 +46,8 @@ const renderQuestion = (quizArr) => {
   const playAgain = createNodeElem("button");
 
   playAgain.addEventListener("click", playAgainButtonListener);
-  console.log(quizArr.length);
 
   if (quizArr.length === 0) {
-    console.log("game over");
     h1.innerHTML = "Game over";
     p.innerHTML = `You have answered ${totalUserCorrectAnswers} answers correctly out of 10`;
     playAgain.classList.add("playAgain");
@@ -64,11 +62,6 @@ const renderQuestion = (quizArr) => {
     for (let i = 0; i <= questionPerPage - 1 && i <= quizArr.length; i++) {
       h1.innerHTML = quizArr[i].question;
 
-      append(divContent, h1);
-      append(divContent, buttonsDiv);
-      append(buttonsDiv, trueButton);
-      append(buttonsDiv, falseButton);
-
       buttonsDiv.classList.add("buttons");
 
       trueButton.innerHTML = "TRUE";
@@ -76,6 +69,11 @@ const renderQuestion = (quizArr) => {
 
       falseButton.innerHTML = "FALSE";
       falseButton.value = false;
+
+      append(divContent, h1);
+      append(divContent, buttonsDiv);
+      append(buttonsDiv, trueButton);
+      append(buttonsDiv, falseButton);
 
       TrueOrFalseEventListener(trueButton, quizArr[i].correct_answer, quizArr);
       TrueOrFalseEventListener(falseButton, quizArr[i].correct_answer, quizArr);
@@ -90,8 +88,6 @@ const fetchQuizData = async () => {
     .then((res) => res.json())
     .then((res) => {
       let quizs = res.results;
-      console.log(quizs);
-
       renderQuestion(quizs);
     })
     .catch((err) => console.log("Error!", err));
