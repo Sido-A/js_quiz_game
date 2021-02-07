@@ -49,7 +49,7 @@ const renderQuestion = (quizArr) => {
 
   if (quizArr.length === 0) {
     h1.innerHTML = "Game over";
-    p.innerHTML = `You have correclty answered ${totalUserCorrectAnswers} out of 10`;
+    p.innerHTML = `You have correctly answered ${totalUserCorrectAnswers} out of 10`;
     playAgain.classList.add("playAgain");
     playAgain.innerHTML = "Play again";
 
