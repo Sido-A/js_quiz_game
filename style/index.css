@@ -1,0 +1,152 @@
+@-webkit-keyframes trueButtonBlink {
+  to {
+    background-color: green;
+  }
+  50% {
+    background-color: #1da534;
+  }
+  80% {
+    background-color: #1da534;
+  }
+  from {
+    background-color: green;
+  }
+}
+
+@keyframes trueButtonBlink {
+  to {
+    background-color: green;
+  }
+  50% {
+    background-color: #1da534;
+  }
+  80% {
+    background-color: #1da534;
+  }
+  from {
+    background-color: green;
+  }
+}
+
+@-webkit-keyframes falseButtonBlink {
+  to {
+    background-color: red;
+  }
+  50% {
+    background-color: #9b0808;
+  }
+  80% {
+    background-color: #9b0808;
+  }
+  from {
+    background-color: red;
+  }
+}
+
+@keyframes falseButtonBlink {
+  to {
+    background-color: red;
+  }
+  50% {
+    background-color: #9b0808;
+  }
+  80% {
+    background-color: #9b0808;
+  }
+  from {
+    background-color: red;
+  }
+}
+
+.quiz {
+  background-color: #c2c2c2;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 0 auto;
+}
+
+.quiz .quiz__content {
+  color: #fff;
+  text-align: center;
+}
+
+.quiz .quiz__content h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.quiz .quiz__content p {
+  font-size: 1.5rem;
+}
+
+.quiz .quiz__content button {
+  width: 9.375rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 1.5625rem;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.quiz .quiz__content .playAgain {
+  color: #fff;
+  background-color: #000;
+}
+
+.quiz .quiz__content .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 23.75rem) {
+  .quiz .quiz__content .buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 23.75rem) {
+  .quiz .quiz__content .buttons button:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+.quiz .quiz__content .buttons .true {
+  -webkit-animation: trueButtonBlink 500ms ease-in-out infinite;
+          animation: trueButtonBlink 500ms ease-in-out infinite;
+}
+
+.quiz .quiz__content .buttons .false {
+  -webkit-animation: falseButtonBlink 500ms ease-in-out infinite;
+          animation: falseButtonBlink 500ms ease-in-out infinite;
+}
+/*# sourceMappingURL=index.css.map */
